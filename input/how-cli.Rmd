@@ -1,0 +1,58 @@
+layout: true
+
+## Compiling a document from the command line
+
+---
+
+---
+
+### Exercise
+
+1. Download a template from <https://janusvm.github.io/aau-project-template>
+
+1. Unpack in a folder somewhere on your computer
+
+1. Delete `master.pdf`
+
+1. Open a command prompt/terminal
+
+1. `cd` to the folder (use `\` instead of `/` on Windows), e.g.
+    ```sh
+    cd path/to/project
+    ```
+
+---
+
+### Exercise (cont.)
+
+1. Compile `master`;
+    ```sh
+    pdflatex master
+    ```
+    Open the PDF file.
+    Notice anything missing?
+
+1. Run `pdflatex` again. What changed in the PDF? What's still missing?
+
+1. Run `bibtex`. What changed on disk?
+    ```sh
+    bibtex master
+    ```
+
+1. Run `pdflatex` again twice
+
+---
+
+### Exercise (extra)
+
+If you have `latexmk` installed
+
+1. Delete the auxiliary files and PDF output
+    ```sh
+    latexmk -bibtex -C
+    ```
+
+2. Compile `master` using `latexmk`;
+    ```sh
+    latexmk -pdf -quiet -bibtex master
+    ```

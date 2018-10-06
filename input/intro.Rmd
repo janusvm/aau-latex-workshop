@@ -1,0 +1,17 @@
+# Overview of today
+
+--
+
+- What is LaTeX?
+
+--
+
+- Why should we use LaTeX?
+
+--
+
+- How do we use LaTeX?
+
+--
+
+- How do we write LaTeX?

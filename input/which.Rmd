@@ -1,0 +1,70 @@
+name: which
+
+# The most important LaTeX binaries
+
+--
+
+- [`pdflatex`](https://linux.die.net/man/1/pdflatex) : used to generate a PDF file
+
+--
+
+- [`bibtex`](https://linux.die.net/man/1/bibtex) : used to generate auxiliary files for citations
+
+--
+
+- [`latexmk`](https://man.cx/latexmk) : Perl script for automating the build process
+
+--
+
+.pull-left[
+### Windows (cmd)
+
+```sh
+where pdflatex
+where bibtex
+where perl
+where latexmk
+```
+]
+
+.pull-right[
+### macOS/Linux (Terminal)
+
+```sh
+which pdflatex
+which bibtex
+which perl
+which latexmk
+```
+]
+
+---
+
+## If you get errors from where/which
+
+1. You didn't install the program, or
+2. The installer didn't add the containing folder to your system's PATH
+
+.pull-left[
+### Windows
+
+1. Open *Settings*
+2. Search for *Edit environment variables for your account*
+3. Highlight *Path* under *User variables* and click *Edit*
+4. Click *New* and browse to the folder containing the LaTeX binaries
+
+With MiKTeX, they will be under `C:\Users\<name>\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64`
+]
+
+.pull-right[
+### macOS
+
+1. Open *Terminal* and run:
+    ```sh
+    sudo nano /etc/paths
+    ```
+2. Go to the bottom of the file and add the path to the LaTeX binaries
+3. Hit `Ctrl+X`, `Y`, `Enter` to save and quit
+
+With MacTeX, they will be under `/Library/TeX/texbin`
+]

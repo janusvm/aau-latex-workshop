@@ -18,6 +18,233 @@ class: center, middle, inverse, title-slide
 
 ---
 
+
+
+
+
+# Overview of today
+
+--
+
+- What is LaTeX?
+
+--
+
+- Why should we use LaTeX?
+
+--
+
+- How do we use LaTeX?
+
+--
+
+- How do we write LaTeX?
+
+---
+
+
+name: what
+
+# What is LaTeX?
+
+From &lt;https://www.latex-project.org/&gt;:
+
+&gt; *LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation. LaTeX is the de facto standard for the communication and publication of scientific documents.*
+
+---
+
+
+name: why
+
+# Why LaTeX?
+
+--
+
+- Handles large documents consisting of multiple files
+
+--
+
+- Typesets math beautifully and easily
+
+--
+
+- Free
+
+--
+
+- Backwards compatible
+
+--
+
+- Easy sectioning, automatic numbering
+
+--
+
+- Cross references and citations
+
+--
+
+- Documents are consistent
+
+--
+
+- Not restricted to a specific editor
+
+--
+
+- Plain text format `\(\implies\)` perfect for version control
+
+---
+
+
+name: which
+
+# The most important LaTeX binaries
+
+--
+
+- [`pdflatex`](https://linux.die.net/man/1/pdflatex) : used to generate a PDF file
+
+--
+
+- [`bibtex`](https://linux.die.net/man/1/bibtex) : used to generate auxiliary files for citations
+
+--
+
+- [`latexmk`](https://man.cx/latexmk) : Perl script for automating the build process
+
+--
+
+.pull-left[
+### Windows (cmd)
+
+```sh
+where pdflatex
+where bibtex
+where perl
+where latexmk
+```
+]
+
+.pull-right[
+### macOS/Linux (Terminal)
+
+```sh
+which pdflatex
+which bibtex
+which perl
+which latexmk
+```
+]
+
+---
+
+## If you get errors from where/which
+
+1. You didn't install the program, or
+2. The installer didn't add the containing folder to your system's PATH
+
+.pull-left[
+### Windows
+
+1. Open *Settings*
+2. Search for *Edit environment variables for your account*
+3. Highlight *Path* under *User variables* and click *Edit*
+4. Click *New* and browse to the folder containing the LaTeX binaries
+
+With MiKTeX, they will be under `C:\Users\&lt;name&gt;\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64`
+]
+
+.pull-right[
+### macOS
+
+1. Open *Terminal* and run:
+    ```sh
+    sudo nano /etc/paths
+    ```
+2. Go to the bottom of the file and add the path to the LaTeX binaries
+3. Hit `Ctrl+X`, `Y`, `Enter` to save and quit
+
+With MacTeX, they will be under `/Library/TeX/texbin`
+]
+
+---
+
+
+name: how
+class: center, middle, inverse
+
+# How to use LaTeX
+
+---
+
+
+layout: true
+
+## Compiling a document from the command line
+
+---
+
+---
+
+### Exercise
+
+1. Download a template from &lt;https://janusvm.github.io/aau-project-template&gt;
+
+1. Unpack in a folder somewhere on your computer
+
+1. Delete `master.pdf`
+
+1. Open a command prompt/terminal
+
+1. `cd` to the folder (use `\` instead of `/` on Windows), e.g.
+    ```sh
+    cd path/to/project
+    ```
+
+---
+
+### Exercise (cont.)
+
+1. Compile `master`;
+    ```sh
+    pdflatex master
+    ```
+    Open the PDF file.
+    Notice anything missing?
+
+1. Run `pdflatex` again. What changed in the PDF? What's still missing?
+
+1. Run `bibtex`. What changed on disk?
+    ```sh
+    bibtex master
+    ```
+
+1. Run `pdflatex` again twice
+
+---
+
+### Exercise (extra)
+
+If you have `latexmk` installed
+
+1. Delete the auxiliary files and PDF output
+    ```sh
+    latexmk -bibtex -C
+    ```
+
+2. Compile `master` using `latexmk`;
+    ```sh
+    latexmk -pdf -quiet -bibtex master
+    ```
+
+---
+layout: false
+
+
+## Using a specialised editor
+
+![](img/texmaker-interface.png)
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({

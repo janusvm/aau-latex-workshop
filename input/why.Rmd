@@ -1,0 +1,39 @@
+name: why
+
+# Why LaTeX?
+
+--
+
+- Handles large documents consisting of multiple files
+
+--
+
+- Typesets math beautifully and easily
+
+--
+
+- Free
+
+--
+
+- Backwards compatible
+
+--
+
+- Easy sectioning, automatic numbering
+
+--
+
+- Cross references and citations
+
+--
+
+- Documents are consistent
+
+--
+
+- Not restricted to a specific editor
+
+--
+
+- Plain text format $\implies$ perfect for version control

@@ -9,9 +9,6 @@ Its purpose is to teach the students how to write semester projects with LaTeX.
 - What *is* LaTeX
 - Why use LaTeX (instead of e.g. MS Word)?
 - Understanding the purpose of the LaTeX programs
-  - `pdflatex`
-  - `bibtex`
-  - `latexmk`
 - Building documents using the programs directly from the command line
 - Building documents from a graphical editor
 - Words of advice
@@ -22,11 +19,14 @@ Its purpose is to teach the students how to write semester projects with LaTeX.
 
 > LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation. LaTeX is the de facto standard for the communication and publication of scientific documents.
 
+LaTeX is a *typesetting system*, not a word processor.
+
 You may think of LaTeX as a programming language specialised for creating documents.
-Instead of writing text, which you then highlight and click buttons to format (WYSIWYG), you write commands to instruct the *compiler* how to typeset your text.
+Instead of writing text, which you then highlight and click buttons to format (WYSIWYG), you write source code that a *compiler* turns into a document.
 
 Like with many other programming languages, LaTeX is available in several different forms, called *distributions*.
-A LaTeX distribution will package the
+A LaTeX distribution will supply the binaries and packages needed to generate documents.
+We'll have a look at the most important ones in a moment.
 
 
 ## Why LaTeX?
@@ -35,7 +35,6 @@ Why would you want to use LaTeX instead of something like MS Word?
 For several reasons:
 
 - LaTeX easily handles large documents divided into multiple files
-- LaTeX gives you a lot of control over the looks of your document
 - LaTeX typesets math beautifully and easily
 - LaTeX is free
 - LaTeX is backwards compatible
@@ -150,3 +149,10 @@ Let's try building a document.
 9. Run `pdflatex` again twice
 
     Now, `master.pdf` should be typeset correctly, complete with cross references and citations.
+
+10. Run `latexmk -bibtex -C` to delete all output
+11. Run `latexmk -pdf -quiet -bibtex master` to do all the steps
+
+## Building from editor
+
+(Open TeXMaker and demonstrate how to replicate the above steps)

@@ -1,0 +1,15 @@
+name: how
+class: center, middle, inverse
+
+# How to use LaTeX
+
+---
+
+```{r how-cli, child = "how-cli.Rmd"}
+```
+
+---
+layout: false
+
+```{r how-gui, child = "how-gui.Rmd"}
+```

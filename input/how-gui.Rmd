@@ -1,0 +1,3 @@
+## Using a specialised editor
+
+![](img/texmaker-interface.png)

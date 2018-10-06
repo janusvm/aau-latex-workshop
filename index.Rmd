@@ -15,3 +15,26 @@ output:
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
+
+```{r intro, child = "input/intro.Rmd"}
+```
+
+---
+
+```{r what, child = "input/what.Rmd"}
+```
+
+---
+
+```{r why, child = "input/why.Rmd"}
+```
+
+---
+
+```{r which, child = "input/which.Rmd"}
+```
+
+---
+
+```{r how, child = "input/how.Rmd"}
+```
