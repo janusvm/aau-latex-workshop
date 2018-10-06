@@ -1,0 +1,63 @@
+/*----- FONTS -----*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu Mono:400,700');
+
+/* Code */
+.remark-code, .remark-inline-code {
+  font-family: 'Ubuntu Mono', 'Lucida Console', Monaco, monospace;
+  /* font-weight: 400; */
+}
+
+.remark-inline-code {
+  font-size: 110%;
+}
+
+.remark-code-line-highlighted {
+  color: rgb(253, 151, 31);
+  background-color: #75715e; /* rgba(0, 0, 0, 0); */
+  font-weight: 700;
+}
+
+/* Slide numbers */
+.remark-slide-number {
+  font-family: 'Roboto Condensed', 'Droid Serif', 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
+  font-weight: 300;
+}
+
+/* MathJax font size */
+.mjx-chtml{ font-size: 110% !important; }
+
+
+/* ----- STYLE ----- */
+
+/* Custom style tags */
+.large { font-size: 130%; }
+.small { font-size: 70%; }
+.rb{
+  color: rgb(249, 38, 114);
+  font-weight: 700;
+}
+
+/* Remove slide number from inverse slides */
+.inverse .remark-slide-number {
+  display: none;
+}
+
+/* Remove the shadow around slide frames */
+.remark-slide-scaler {
+  -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+/* Make the date line on the title slide grey */
+.title-slide > h3:nth-of-type(2) {
+  color: #7f7f7c;
+}
+
+/* Image icons */
+img[alt=icon] {
+  width: 20px;
+  vertical-align: -2pt;
+}
+

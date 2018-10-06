@@ -1,0 +1,17 @@
+---
+title: "LaTeX Workshop"
+author: "<a href='https://github.com/janusvm'>Janus Valberg-Madsen</a>"
+date: "2018-10-08 @ Aalborg University"
+output:
+  xaringan::moon_reader:
+    css: [default, default-fonts, custom.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: monokai-sublime
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
