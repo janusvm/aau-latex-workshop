@@ -38,3 +38,8 @@ options(htmltools.dir.version = FALSE)
 
 ```{r how, child = "input/how.Rmd"}
 ```
+
+---
+
+```{r exercises, child = "input/exercises.Rmd"}
+```

@@ -15,3 +15,7 @@
 --
 
 - How do we write LaTeX?
+
+--
+
+- How do we structure a project?

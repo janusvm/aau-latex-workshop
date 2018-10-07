@@ -1,3 +1,5 @@
 ## Using a specialised editor
 
 ![](img/texmaker-interface.png)
+
+For this tutorial, I am using TeXMaker on Windows 10, with a full MiKTeX distribution and Strawberry Perl installed.

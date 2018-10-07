@@ -40,6 +40,10 @@ class: center, middle, inverse, title-slide
 
 - How do we write LaTeX?
 
+--
+
+- How do we structure a project?
+
 ---
 
 
@@ -50,6 +54,10 @@ name: what
 From &lt;https://www.latex-project.org/&gt;:
 
 &gt; *LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation. LaTeX is the de facto standard for the communication and publication of scientific documents.*
+
+--
+
+![](img/ex-full.png)
 
 ---
 
@@ -68,7 +76,7 @@ name: why
 
 --
 
-- Free
+- Free and open source
 
 --
 
@@ -89,6 +97,14 @@ name: why
 --
 
 - Not restricted to a specific editor
+
+--
+
+- Platform independent
+
+--
+
+- Command line interface `\(\implies\)` perfect for scripting
 
 --
 
@@ -163,7 +179,7 @@ With MiKTeX, they will be under `C:\Users\&lt;name&gt;\AppData\Local\Programs\Mi
     sudo nano /etc/paths
     ```
 2. Go to the bottom of the file and add the path to the LaTeX binaries
-3. Hit `Ctrl+X`, `Y`, `Enter` to save and quit
+3. Hit `Ctrl+X Y Enter` to save and quit
 
 With MacTeX, they will be under `/Library/TeX/texbin`
 ]
@@ -245,6 +261,93 @@ layout: false
 ## Using a specialised editor
 
 ![](img/texmaker-interface.png)
+
+For this tutorial, I am using TeXMaker on Windows 10, with a full MiKTeX distribution and Strawberry Perl installed.
+
+---
+
+
+# Writing LaTeX code
+
+For this part, I will explain the syntax of LaTeX in very general terms:
+
+- The document class
+
+- Installing and importing packages
+
+- Commands
+
+- Environments
+
+The best way of learning the details of the LaTeX syntax (i.e. all the different commands and symbols) is by trial and error.
+
+There will be a set of exercises at the end for this.
+
+---
+
+
+# Structuring a LaTeX project
+
+.pull-left[
+### Document hierachy
+
+```
+master
+│
+├── preamble files
+│   ├── packages
+│   └── customisations
+│
+├── content files
+│   ├── body text
+│   ├── figures, tables, etc.
+│   └── sub input files
+│
+├── appendices
+│
+└── bibliography
+```
+]
+
+.pull-right[
+### File structure
+
+```
+.
+├── master.tex
+├── preamble.tex
+├── fig
+│   ├── alg
+│   ├── img
+│   ├── tab
+│   └── tikz
+├── incl
+│   ├── app
+│   ├── bib
+│   ├── main
+│   └── misc
+└── (+ folders for extra stuff)
+```
+]
+
+---
+
+
+# Exercises
+
+.center[✨ &lt;**_https://janusvm.github.io/aau-project-template/exercises_**&gt; ✨]
+
+## Links and help
+
+- These slides: &lt;https://janusvm.github.io/aau-latex-workshop&gt;
+
+- Wikibook: &lt;https://en.wikibooks.org/wiki/LaTeX&gt;
+
+- *Help* ➡ *LaTeX Reference* (if you use TeXMaker)
+
+- Google :^)
+
+Feel free to ask questions too!
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({

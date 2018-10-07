@@ -12,7 +12,7 @@ name: why
 
 --
 
-- Free
+- Free and open source
 
 --
 
@@ -33,6 +33,14 @@ name: why
 --
 
 - Not restricted to a specific editor
+
+--
+
+- Platform independent
+
+--
+
+- Command line interface $\implies$ perfect for scripting
 
 --
 

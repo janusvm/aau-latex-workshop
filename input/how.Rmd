@@ -13,3 +13,13 @@ layout: false
 
 ```{r how-gui, child = "how-gui.Rmd"}
 ```
+
+---
+
+```{r how-write, child = "how-write.Rmd"}
+```
+
+---
+
+```{r how-struct, child = "how-struct.Rmd"}
+```

@@ -1,0 +1,43 @@
+# Structuring a LaTeX project
+
+.pull-left[
+### Document hierachy
+
+```
+master
+│
+├── preamble files
+│   ├── packages
+│   └── customisations
+│
+├── content files
+│   ├── body text
+│   ├── figures, tables, etc.
+│   └── sub input files
+│
+├── appendices
+│
+└── bibliography
+```
+]
+
+.pull-right[
+### File structure
+
+```
+.
+├── master.tex
+├── preamble.tex
+├── fig
+│   ├── alg
+│   ├── img
+│   ├── tab
+│   └── tikz
+├── incl
+│   ├── app
+│   ├── bib
+│   ├── main
+│   └── misc
+└── (+ folders for extra stuff)
+```
+]

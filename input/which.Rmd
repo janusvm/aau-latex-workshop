@@ -64,7 +64,7 @@ With MiKTeX, they will be under `C:\Users\<name>\AppData\Local\Programs\MiKTeX 2
     sudo nano /etc/paths
     ```
 2. Go to the bottom of the file and add the path to the LaTeX binaries
-3. Hit `Ctrl+X`, `Y`, `Enter` to save and quit
+3. Hit `Ctrl+X Y Enter` to save and quit
 
 With MacTeX, they will be under `/Library/TeX/texbin`
 ]

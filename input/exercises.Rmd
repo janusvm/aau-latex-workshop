@@ -1,0 +1,15 @@
+# Exercises
+
+.center[✨ <**_https://janusvm.github.io/aau-project-template/exercises_**> ✨]
+
+## Links and help
+
+- These slides: <https://janusvm.github.io/aau-latex-workshop>
+
+- Wikibook: <https://en.wikibooks.org/wiki/LaTeX>
+
+- *Help* ➡ *LaTeX Reference* (if you use TeXMaker)
+
+- Google :^)
+
+Feel free to ask questions too!

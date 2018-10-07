@@ -1,0 +1,15 @@
+# Writing LaTeX code
+
+For this part, I will explain the syntax of LaTeX in very general terms:
+
+- The document class
+
+- Installing and importing packages
+
+- Commands
+
+- Environments
+
+The best way of learning the details of the LaTeX syntax (i.e. all the different commands and symbols) is by trial and error.
+
+There will be a set of exercises at the end for this.

@@ -13,11 +13,12 @@ SUBDIR = input
 
 # Source files
 RMD_INPUT := $(wildcard $(SUBDIR)/*.Rmd)
+IMGS := $(wildcard img/*)
 
 # Rules -----------------------------------------------------------------------
 
 # Slides
 slides: $(SLIDES).html
 
-$(SLIDES).html: $(SLIDES).Rmd $(RMD_INPUT) $(CSS)
+$(SLIDES).html: $(SLIDES).Rmd $(RMD_INPUT) $(CSS) $(IMGS)
 	Rscript $(R_OPTS) -e "rmarkdown::render('$<', 'xaringan::moon_reader')"
