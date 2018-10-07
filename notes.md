@@ -42,6 +42,8 @@ For several reasons:
 - LaTeX handles cross references and citations
 - LaTeX documents are consistent
 - LaTeX is not restricted to a specific editor
+- LaTeX is platform independent
+- LaTeX commands can be used in scripts
 - LaTeX documents are easily kept under version control
 
 
@@ -156,3 +158,96 @@ Let's try building a document.
 ## Building from editor
 
 (Open TeXMaker and demonstrate how to replicate the above steps)
+
+TeXMaker also has:
+
+- Lots of buttons for inputting symbols
+- Wizards for creating tables and matrices
+- User defined shortcuts and build commands
+- Jump-to-error functionality
+
+
+## Writing LaTeX
+
+### Document class
+
+The `\documentclass` determines the type of document and sets some options.
+Several classes are available, and many of them are very similar:
+
+- `book` and `report` support `\chapter`, `article` doesn't
+- `book` offers the `\frontmatter`, `\mainmatter`, and `\backmatter` commands
+- `book` doesn't support the `abstract` environment, the others do
+
+I usually use `book` for semester projects to have access to the `\front`-, `\main`-, and `backmatter` commands.
+
+Other, notable classes include:
+
+- `beamer` for presentations
+- `letter` for writing letters
+- `standalone`, good for rendering TiKZ figures to use for something else
+
+
+### Packages
+
+You don't have to reinvent the wheel with every document.
+The command `\usepackage[options]{package}` lets you import packages into your document, adding additional functionality.
+Usually, these will be packages from [CTAN](https://ctan.org/), the *Comprehensive TeX Archive Network*, but you can also define your own.
+
+Simply put `\ProvidesPackage{package-name}` in a file titled `package-name.sty` and add your commands.
+
+If you didn't install a full distribution, you may sometimes have to install additional packages from CTAN.
+With a default MiKTeX installation, this happens automatically on the fly, when you try to compile a document that uses them.
+MiKTeX also comes bundled with a GUI for the package manager.
+With TeXLive, you need to invoke the command line tool:
+
+```sh
+tlmgr install package
+```
+
+On Mac, you can also install TeX Live Utility, which gives you a GUI tool akin to MiKTeX'.
+
+
+### Commands
+
+Commands begin with `\` and they alter the output of your text in various ways.
+Certain commands are necessary to even build the document, namely
+
+- `\documentclass`
+- `\begin{document}` and `\end{document}`
+
+You can define your own commands with
+
+```tex
+\newcommand{name}[num][default]{definition}
+```
+
+Examples of common commands are the Greek letters, e.g. `\lambda`.
+
+
+### Environments
+
+Environments define blocks that may have special behaviour.
+They are enclosed in `\begin{...}` and `\end{...}` commands.
+Important environments include
+
+- `document`
+- `figure`
+- `table` + `tabular`
+- `equation` and `equation*`
+- `align` and `align*`
+- `itemize`, `enumerate`, and `description`
+
+Like with regular commands, you can define your own environments;
+
+```tex
+\newenvironment{name}[num][default]{before}{after}
+```
+
+
+## Structuring a project
+
+Thanks to the `\include` and `\input` commands, you don't have to write everything in one, big file.
+In fact, that would be a very bad idea, as it would make it harder to isolate errors, navigate the source code, and figure out version control.
+
+In general, you want to organise the project into several files and folders.
+Put the master file in the root of the project, and make a subfolder for every type of input file, possibly even with subfolders in those.
